@@ -1,22 +1,24 @@
-.data
-count DWORD ?
+INCLUYE Irvine32.inc 
 
-.code
-    main PROC
-        mov count, 0
-        mov ecx, 10
-        call generateRecursion
+.data 
+count DWORD? 
 
-        exit
-    main ENDP
+.code 
+    main PROC 
+        mov conteo, 0 
+        mov ecx, 10 
+        call generateRecursion 
 
-    generateRecursion PROC
-        inc count
-        cmp count, ecx
-        jz quit
-        call generateRecursion
-        quit:
-        ret
-    generateRecursion ENDP
+        exit 
+    main ENDP 
+
+    generateRecursion PROC 
+        inc conteo 
+        cmp count, ecx 
+        jz quit 
+        call generateRecursion 
+        quit: 
+        ret 
+    generateRecursion ENDP 
 
 END main
